@@ -11,7 +11,6 @@ env/
 .vscode
 SHOW
 README.me
-analytics.html
 settings_envs/
 notes*
 settings_*
