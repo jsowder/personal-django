@@ -1,0 +1,11 @@
+{% if messages %}
+<div class="row">
+    {% for message in messages %}
+    <div class="col s12">
+        <div class="card-panel yellow {% if message.tags %} {{ message.tags }} {% endif %}">
+            <p class="white-text flow-text">Message: {{ message }}</p>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endif %}

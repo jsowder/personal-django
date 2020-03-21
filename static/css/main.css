@@ -1,0 +1,44 @@
+  html {
+    font-family: 'Enriqueta';
+  }
+
+  body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background-image: linear-gradient(to bottom, rgb(27, 27, 27), rgb(19, 19, 19));
+    /* background-color: aliceblue; */
+  }
+
+  main {
+    flex: 1 0 auto;
+    background-color: transparent;
+  }
+
+  .nav-wrapper {
+    background-color: transparent;
+    /* display: table; */
+  }
+
+  .nav-wrapper li{
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  a{
+    color: white;
+  }
+
+  a:hover {
+    color: green;
+  }
+
+  img {
+
+    vertical-align: middle;
+  }
+
+.card-image img{
+    height: 12em; 
+    object-fit: cover;
+} 

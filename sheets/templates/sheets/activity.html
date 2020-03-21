@@ -1,0 +1,47 @@
+{% extends 'jacobsowder_com/base.html' %}
+{% load static %}
+{% load humanize %}
+
+{% block title %}
+Activity
+{% endblock title %}
+
+{% block content %}
+
+<div class="row white-text">
+    <div class="col s12 b10">
+        <h2>Activity</h2>
+    </div>
+</div>
+
+<div class="row white-text">
+    {% for id, activity in activities.items %}
+    <div class="col s12">
+        <p>{{ activity.title }}</p>
+    </div>
+    {% endfor %}
+</div>
+
+<table class="white-text">
+    <thead>
+        <tr>
+            <th>Day</th>
+            <th>Time</th>
+            <th>Activity</th>
+            <th>Source</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for id, activity in activities.items %}
+        <tr>
+            <td>{{ activity.timestamp | naturalday | default:'' }}</td>
+            <td>{{ activity.timestamp | time:"H:i" | default:'' }}</td>
+            <td>{{ activity.value | default:'' }}</td>
+            <td>{{ activity.source | default:'' }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+
+{% endblock content %}

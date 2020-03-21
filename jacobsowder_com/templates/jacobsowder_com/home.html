@@ -1,0 +1,69 @@
+{% extends 'jacobsowder_com/base.html' %}
+{% load static %}
+
+{% block title %}
+Home
+{% endblock title %}
+
+{% block content %}
+
+<div class="row white-text">
+    <div class="col s12 b10">
+        <h1 class="{{ accentcolor | default:'green' }}-text text-{{ accentqualifier | default:'accent-4' }}">
+            Hello there! I'm Jacob.
+        </h1>
+    </div>
+</div>
+
+<div class="divider"></div>
+
+<div class="row white-text">
+    <!-- <div class="col s12"> -->
+    <!-- <h2 class="grey-text text-darken-1">About Me</h2> -->
+    <!-- <h5 class="grey-text text-darken-2">(In Short)</h5> -->
+    <!-- </div> -->
+    <div class="col s12 flow-text">
+        <ol class="grey-text text-darken-1">
+            <li style="margin: 15px;"><span class="white-text">I am a passionate, self-taught programmer. I am most
+                    experienced in Python, Django, and HTML/CSS.</span></li>
+            <li style="margin: 15px;"><span class="white-text">My educational background is in statistics and
+                    economics, but I have taught myself web development in Django.</span></li>
+            <li style="margin: 15px;"><span class="white-text">If I applied to your job, I do actually want to work for
+                    you. I will do good work.
+                </span></li>
+        </ol>
+    </div>
+</div>
+
+{% include 'jacobsowder_com/projects_snippet.html' %}
+
+<div class="row white-text">
+
+    <div class="col s12 white-text flow-text">
+
+        <h3 class="grey-text text-darken-1">
+            (More) About Me
+        </h3>
+
+        <p>In 2018, I graduated with a bachelors in Economics. My first job was at a large corporate insurance company
+            as a data analyst. There I crunched numbers, made models, and queried SQL every day. I used R, Python, SQL,
+            and Excel.
+        </p>
+
+        <p>Sometimes I encountered thorny, complex problems. When those problems required new data, I was out of luck.
+            After all, I only had what the software engineers handed to me.</p>
+
+        <p>Statistical programming wasn't enough. I wasn't happy with the easy problems. I decided to jump
+            ship and learn to code apps and websites.</p>
+
+        <p>Since then, I have learned how to use Python for more than statistics. I can create websites, reusable apps,
+            APIs, backends, frontends, and more. I'm excited to learn even more working with you.</p>
+
+        <p>
+
+        </p>
+
+    </div>
+</div>
+
+{% endblock content %}

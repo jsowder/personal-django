@@ -1,0 +1,25 @@
+{% extends 'jacobsowder_com/base.html' %}
+{% load static %}
+
+{% block title %}
+Heyo!
+{% endblock title %}
+
+{% block content %}
+
+<div class="row white-text">
+    <div class="col s12 b10">
+        <h1 class="{{ accentcolor | default:'green' }}-text text-{{ accentqualifier | default:'accent-4' }}">
+            Whoops! Whatever you're looking for ain't here, partner.
+        </h1>
+    </div>
+</div>
+<div class="row white-text">
+    <div class="col s12 b10">
+        <h3 class="{{ accentcolor | default:'green' }}-text text-{{ accentqualifier | default:'accent-4' }}">
+            Point the ol' clicker on my name up there and get yerself back home.
+        </h3>
+    </div>
+</div>
+
+{% endblock content %}

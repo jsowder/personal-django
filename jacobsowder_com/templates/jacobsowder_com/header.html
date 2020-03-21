@@ -1,0 +1,34 @@
+{% block header %}
+<div class="container">
+    <nav class="transparent z-depth-0">
+        <div class="nav-wrapper">
+            <ul id="nav-mobile" class="left" style="vertical-align: center;">
+                <li>
+                    <a href="/"
+                        class="{{ accentcolor | default:'green' }}-text text-{{ accentqualifier | default:'accent-4' }}">
+                        Jacob Sowder
+                    </a>
+                </li>
+            </ul>
+            <ul id="nav-mobile" class="right">
+                <li>
+                    <a href="https://github.com/jsowder" target="_blank">
+                        <i class="fab fa-github-square valign-wrapper grey-text text-darken-1"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/jacobsowder/" target="_blank">
+                        <i class="fab fa-linkedin valign-wrapper grey-text text-darken-1"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="mailto:jacobsowder@gmail.com?subject=Website%20response&body=Hey%20Jacob,">
+
+                        <i class="material-icons grey-text text-darken-1">local_post_office</i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+{% endblock header %}

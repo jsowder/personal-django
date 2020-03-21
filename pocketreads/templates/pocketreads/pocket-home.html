@@ -1,0 +1,151 @@
+{% extends 'jacobsowder_com/base.html' %}
+{% load static %}
+{% load pocket_extras %}
+{% load humanize %}
+
+{% block title %}
+Home
+{% endblock title %}
+
+{% block content %}
+
+<div class="row white-text">
+    <div class="col s12 b10">
+        <h2>
+            What have I been reading lately?
+        </h2>
+        <p class="flow-text">
+            I use <a href="https://www.getpocket.com">Pocket</a> to store articles I want
+            to read and articles I've read in the past. Thanks to their public API, I can display my reading history for
+            you here!
+        </p>
+        <p class="flow-text">
+            Take a look...
+        </p>
+    </div>
+</div>
+
+<!-- Archived -->
+
+<div class="row white-text">
+    <div class="col s12 center-on-small-only">
+        <h4>
+            I've read these...
+        </h4>
+    </div>
+</div>
+
+<div class="row white-text">
+    {% for id, pocket in pocket_archive.items %}
+    <a href="{{ pocket.resolved_url }}" target="_blank">
+        <div class="col s12 m4">
+            <div class="card transparent medium">
+                <div class="card-image">
+                    <img alt="{{ pocket.resolved_title }}" class=""
+                        src="{% if pocket.image.src %}{{ pocket.image.src }}{% else %}{% static "media/pocket-logo.png" %}{% endif %}">
+                </div>
+                <div class="card-content">
+                    <h6 class=""> {{ pocket.resolved_title }}</h6>
+                    <p class="grey-text"> {{ pocket.excerpt }} </p>
+                </div>
+                <div class="card-action blue-grey-text">
+                    Read
+                    {{ pocket.time_read | print_timestamp | naturalday }}
+                </div>
+            </div>
+        </div>
+    </a>
+    {% endfor %}
+</div>
+
+<div class="row white-text">
+    <div class="col s12 right-align">
+        <a href="/pocket/more/read">More...</a>
+    </div>
+</div>
+
+<!-- Unread -->
+
+<div class="row white-text">
+    <div class="col s12 center-on-small-only">
+        <h4>
+            I have these on my reading list...
+        </h4>
+    </div>
+</div>
+
+<div class="row white-text">
+    {% for id, pocket in pocket_unread.items %}
+    <a href="{{ pocket.resolved_url }}" target="_blank">
+        <div class="col s12 m4">
+            <div class="card transparent medium">
+                <div class="card-image">
+                    <img alt="{{ pocket.resolved_title }}" class=""
+                        src="{% if pocket.image.src %}{{ pocket.image.src }}{% else %}{% static "media/pocket-logo.png" %}{% endif %}">
+                </div>
+                <div class="card-content">
+                    <h6 class=""> {{ pocket.resolved_title }}</h6>
+                    <p class="grey-text"> {{ pocket.excerpt }} </p>
+                </div>
+                <div class="card-action blue-grey-text">
+                    Added {{ pocket.time_added | print_timestamp | naturalday }}
+                </div>
+            </div>
+        </div>
+    </a>
+    {% endfor %}
+</div>
+
+<div class="row white-text">
+    <div class="col s12 right-align">
+        <a href="/pocket/more/unread">More...</a>
+    </div>
+</div>
+
+<!-- Favorites -->
+
+<div class="row white-text">
+    <div class="col s12 center-on-small-only">
+        <h4>
+            And I really enjoyed these:
+        </h4>
+    </div>
+</div>
+
+<div class="row white-text">
+    {% for id, pocket in pocket_favorites.items %}
+    <a href="{{ pocket.resolved_url }}" target="_blank">
+        <div class="col s12 m4">
+            <div class="card transparent medium">
+                <div class="card-image">
+                    <img alt="{{ pocket.resolved_title }}" class=""
+                        src="{% if pocket.image.src %}{{ pocket.image.src }}{% else %}{% static "media/pocket-logo.png" %}{% endif %}">
+                </div>
+                <div class="card-content">
+                    <h6 class=""> {{ pocket.resolved_title }}</h6>
+                    <p class="grey-text"> {{ pocket.excerpt }} </p>
+                </div>
+                <div class="card-action blue-grey-text">
+                    Faved {{ pocket.time_favorited| print_timestamp | naturalday }}
+                </div>
+            </div>
+        </div>
+    </a>
+    {% endfor %}
+</div>
+
+<div class="row white-text">
+    <div class="col s12 right-align">
+        <a href="/pocket/more/favorites">More...</a>
+    </div>
+</div>
+
+<!-- <div class="row white-text">
+    <div class="col s12 text">
+        <pre>
+            {{pocket_archive | pprint}}
+        </pre>
+    </div>
+</div> -->
+
+{% endblock content %}

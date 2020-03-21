@@ -1,0 +1,30 @@
+{% block floatingbutton %}
+<div class="fixed-action-btn hide-on-med-and-up" style="opacity: .90;">
+    <a class="btn-floating btn-large white">
+        <i class="large material-icons black-text">menu</i>
+    </a>
+    <ul>
+        <li>
+            <a href="#" class="btn-floating white">
+                <i class="black-text material-icons">keyboard_arrow_up</i>
+            </a>
+        </li>
+        <li>
+            <a href="mailto:jacobsowder@gmail.com?subject=Website%20response&body=Hey%20Jacob,"
+                class="btn-floating {{ accentcolor | default:'green' }} {{ accentqualifier | default:'accent-4' }}">
+                <i class="material-icons black-text">local_post_office</i>
+            </a>
+        </li>
+        <li>
+            <a href="https://github.com/jsowder" target="_blank" class="btn-floating white">
+                <i class="black-text fab fa-github"></i>
+            </a>
+        </li>
+        <li>
+            <a href="https://www.linkedin.com/in/jacobsowder/" target="_blank" class="btn-floating white">
+                <i class="black-text fab fa-linkedin-in"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+{% endblock floatingbutton %}

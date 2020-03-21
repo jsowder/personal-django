@@ -44,9 +44,14 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sites',
+    'django.contrib.humanize',
 
     # mine
+    'jacobsowder_com',
+    'pocketreads',
+    'sheets',
     'users',
+    'blog',
 
     # allauth
     'allauth',
@@ -187,4 +192,3 @@ POCKET_SECRET_ACCESS_TOKEN = os.getenv("POCKET_SECRET_ACCESS_TOKEN")
 POCKET_SECRET_CONSUMER_KEY = os.getenv("POCKET_SECRET_CONSUMER_KEY")
 
 ACTIVITY_SHEET_SECRET_ID = os.getenv("ACTIVITY_SHEET_SECRET_ID")
-
