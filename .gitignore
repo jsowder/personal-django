@@ -1,0 +1,92 @@
+# GCP Configurations
+*.yaml
+.gcloudignore
+cloud_sql_proxy
+main.py
+
+# Other
+db.sqlite3*
+*.env
+env/
+.vscode
+SHOW
+README.me
+analytics.html
+settings_envs/
+notes*
+settings_*
+*secret*
+*token*
+.DS_Store
+
+
+
+# More ignores for pycache from https://stackoverflow.com/questions/48072655/django-settings-cpython-36-pyc-not-ignored-by-gitignore
+*.log
+*.pot
+*.pyc
+*/*/*/__pycache__/
+*/*/__pycache__/
+*/__pycache__/
+
+# Default ignores from https://github.com/martinohanlon/flightlight/issues/1
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# PyInstaller
+#  Usually these files are written by a python script from a template
+#  before PyInstaller builds the exe, so as to inject date/other infos into it.
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*,cover
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+local_settings.py
+db.sqlite*
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+target/
