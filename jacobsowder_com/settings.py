@@ -29,7 +29,9 @@ DEBUG = os.getenv("DEBUG") == 'TRUE'
 
 ALLOWED_HOSTS = [
     '127.0.0.1',
-    '*jacobsowder.com',
+    '*.jacobsowder.com',
+    'www.jacobsowder.com',
+    'jacobsowder.com',
     'jacobsowder.pythonanywhere.com',
 ]
 
